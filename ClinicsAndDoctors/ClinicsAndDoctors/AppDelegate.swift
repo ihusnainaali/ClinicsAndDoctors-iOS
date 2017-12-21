@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         #if APPSTORE_BUILD
-          let apikey = "AIzaSyD4YJgOX4NjtGwJDJpLtSwIYpy13ykGxOg"
+          let apikey = "AIzaSyChXsHFeoF6VDUAZCtFzl1CjJEz6UL2HyA"
         #else
           let apikey = "AIzaSyD4YJgOX4NjtGwJDJpLtSwIYpy13ykGxOg"
         #endif
