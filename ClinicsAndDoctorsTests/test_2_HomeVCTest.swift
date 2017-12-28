@@ -34,14 +34,14 @@ class test_2_HomeVCTest: XCTestCase {
     vc.loadData()
     
     while SpecialityModel.specialities.isEmpty ||
-      //ClinicModel.clinics.isEmpty ||
+      ClinicModel.clinics.isEmpty ||
       DoctorModel.doctors.isEmpty
       {
       RunLoop.current.run(mode: .defaultRunLoopMode, before: Date.distantFuture)
     }
     
     XCTAssert(SpecialityModel.specialities.isEmpty == false, "Should load Specialities")
-    //XCTAssert(ClinicModel.clinics.isEmpty == false, "Should load Clinics")
+    XCTAssert(ClinicModel.clinics.isEmpty == false, "Should load Clinics")
     XCTAssert(DoctorModel.doctors.isEmpty == false, "Should load Doctors")
   }
   

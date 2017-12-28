@@ -23,6 +23,7 @@
 		BB24D4EA1FF5833E00DBBD7D /* test_6_TermsPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB24D4E91FF5833D00DBBD7D /* test_6_TermsPolicyVC.swift */; };
 		BB24D4EC1FF58B2100DBBD7D /* test_7_ReviewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB24D4EB1FF58B2100DBBD7D /* test_7_ReviewsVC.swift */; };
 		BB24D4EE1FF5921600DBBD7D /* test_8_ClinincDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB24D4ED1FF5921500DBBD7D /* test_8_ClinincDetailVC.swift */; };
+		BB24D4F61FF593EA00DBBD7D /* ClinicsAndDoctorsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB24D4F51FF593EA00DBBD7D /* ClinicsAndDoctorsUITests.swift */; };
 		FB02285A1F8675F500853B1B /* CustomInfoVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0228591F8675F500853B1B /* CustomInfoVIew.swift */; };
 		FB02285E1F8676C700853B1B /* CustomInfoVIewX.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB02285D1F8676C700853B1B /* CustomInfoVIewX.xib */; };
 		FB3E548F1F81B64900DF65BA /* SpecialityButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3E548E1F81B64900DF65BA /* SpecialityButtonCell.swift */; };
@@ -105,6 +106,13 @@
 			remoteGlobalIDString = FBE201881F7DF69F00C51A0D;
 			remoteInfo = ClinicsAndDoctors;
 		};
+		BB24D4F81FF593EA00DBBD7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FBE201811F7DF69F00C51A0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FBE201881F7DF69F00C51A0D;
+			remoteInfo = ClinicsAndDoctors;
+		};
 		FE0FAA9C1FAC76AF00C27C16 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FE0FAA971FAC76AE00C27C16 /* SwiftMessages.xcodeproj */;
@@ -165,6 +173,9 @@
 		BB24D4E91FF5833D00DBBD7D /* test_6_TermsPolicyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test_6_TermsPolicyVC.swift; sourceTree = "<group>"; };
 		BB24D4EB1FF58B2100DBBD7D /* test_7_ReviewsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test_7_ReviewsVC.swift; sourceTree = "<group>"; };
 		BB24D4ED1FF5921500DBBD7D /* test_8_ClinincDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test_8_ClinincDetailVC.swift; sourceTree = "<group>"; };
+		BB24D4F31FF593EA00DBBD7D /* ClinicsAndDoctorsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClinicsAndDoctorsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB24D4F51FF593EA00DBBD7D /* ClinicsAndDoctorsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsAndDoctorsUITests.swift; sourceTree = "<group>"; };
+		BB24D4F71FF593EA00DBBD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFB51173399C1065925ED638 /* Pods_ClinicsAndDoctorsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClinicsAndDoctorsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0228591F8675F500853B1B /* CustomInfoVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomInfoVIew.swift; path = VC/Cell/CustomInfoVIew.swift; sourceTree = "<group>"; };
 		FB02285D1F8676C700853B1B /* CustomInfoVIewX.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomInfoVIewX.xib; path = VC/Cell/CustomInfoVIewX.xib; sourceTree = "<group>"; };
@@ -296,6 +307,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BB24D4F01FF593EA00DBBD7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FBE201861F7DF69F00C51A0D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,6 +362,15 @@
 			path = ClinicsAndDoctorsTests;
 			sourceTree = "<group>";
 		};
+		BB24D4F41FF593EA00DBBD7D /* ClinicsAndDoctorsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BB24D4F51FF593EA00DBBD7D /* ClinicsAndDoctorsUITests.swift */,
+				BB24D4F71FF593EA00DBBD7D /* Info.plist */,
+			);
+			path = ClinicsAndDoctorsUITests;
+			sourceTree = "<group>";
+		};
 		FB9FD2741F8AFF5700CDA54C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +404,7 @@
 				FE230B8B1FB9DC6800A1F19D /* Localizable.strings */,
 				FBE2018B1F7DF69F00C51A0D /* ClinicsAndDoctors */,
 				BB1BAF651FF55536005D3CAE /* ClinicsAndDoctorsTests */,
+				BB24D4F41FF593EA00DBBD7D /* ClinicsAndDoctorsUITests */,
 				FBE2018A1F7DF69F00C51A0D /* Products */,
 				31E9BFAC841487F6718F609C /* Pods */,
 				A441180926470B459AA69617 /* Frameworks */,
@@ -388,6 +416,7 @@
 			children = (
 				FBE201891F7DF69F00C51A0D /* ClinicsAndDoctors.app */,
 				BB1BAF641FF55536005D3CAE /* ClinicsAndDoctorsTests.xctest */,
+				BB24D4F31FF593EA00DBBD7D /* ClinicsAndDoctorsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -625,6 +654,24 @@
 			productReference = BB1BAF641FF55536005D3CAE /* ClinicsAndDoctorsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		BB24D4F21FF593EA00DBBD7D /* ClinicsAndDoctorsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB24D4FA1FF593EA00DBBD7D /* Build configuration list for PBXNativeTarget "ClinicsAndDoctorsUITests" */;
+			buildPhases = (
+				BB24D4EF1FF593EA00DBBD7D /* Sources */,
+				BB24D4F01FF593EA00DBBD7D /* Frameworks */,
+				BB24D4F11FF593EA00DBBD7D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB24D4F91FF593EA00DBBD7D /* PBXTargetDependency */,
+			);
+			name = ClinicsAndDoctorsUITests;
+			productName = ClinicsAndDoctorsUITests;
+			productReference = BB24D4F31FF593EA00DBBD7D /* ClinicsAndDoctorsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		FBE201881F7DF69F00C51A0D /* ClinicsAndDoctors */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FBE2019E1F7DF69F00C51A0D /* Build configuration list for PBXNativeTarget "ClinicsAndDoctors" */;
@@ -664,6 +711,12 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = FBE201881F7DF69F00C51A0D;
 					};
+					BB24D4F21FF593EA00DBBD7D = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = EUARY92ECY;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FBE201881F7DF69F00C51A0D;
+					};
 					FBE201881F7DF69F00C51A0D = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = Q2WEC266KZ;
@@ -693,6 +746,7 @@
 			targets = (
 				FBE201881F7DF69F00C51A0D /* ClinicsAndDoctors */,
 				BB1BAF631FF55536005D3CAE /* ClinicsAndDoctorsTests */,
+				BB24D4F21FF593EA00DBBD7D /* ClinicsAndDoctorsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -725,6 +779,13 @@
 				BB1BAFB41FF55B0D005D3CAE /* LaunchScreen.storyboard in Resources */,
 				BB1BAFB11FF55B03005D3CAE /* ClinicTableCell.xib in Resources */,
 				BB1BAFB01FF55B01005D3CAE /* DoctorTableCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB24D4F11FF593EA00DBBD7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -906,6 +967,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BB24D4EF1FF593EA00DBBD7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB24D4F61FF593EA00DBBD7D /* ClinicsAndDoctorsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FBE201851F7DF69F00C51A0D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -982,6 +1051,11 @@
 			isa = PBXTargetDependency;
 			target = FBE201881F7DF69F00C51A0D /* ClinicsAndDoctors */;
 			targetProxy = BB1BAF691FF55536005D3CAE /* PBXContainerItemProxy */;
+		};
+		BB24D4F91FF593EA00DBBD7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FBE201881F7DF69F00C51A0D /* ClinicsAndDoctors */;
+			targetProxy = BB24D4F81FF593EA00DBBD7D /* PBXContainerItemProxy */;
 		};
 		FE0FAAB61FADEBD100C27C16 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1079,6 +1153,58 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClinicsAndDoctors.app/ClinicsAndDoctors";
+			};
+			name = Release;
+		};
+		BB24D4FB1FF593EA00DBBD7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EUARY92ECY;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ClinicsAndDoctorsUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = infinixsoft.ClinicsAndDoctorsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClinicsAndDoctors;
+			};
+			name = Debug;
+		};
+		BB24D4FC1FF593EA00DBBD7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EUARY92ECY;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ClinicsAndDoctorsUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = infinixsoft.ClinicsAndDoctorsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClinicsAndDoctors;
 			};
 			name = Release;
 		};
@@ -1229,6 +1355,15 @@
 			buildConfigurations = (
 				BB1BAF6B1FF55536005D3CAE /* Debug */,
 				BB1BAF6C1FF55536005D3CAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB24D4FA1FF593EA00DBBD7D /* Build configuration list for PBXNativeTarget "ClinicsAndDoctorsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB24D4FB1FF593EA00DBBD7D /* Debug */,
+				BB24D4FC1FF593EA00DBBD7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
