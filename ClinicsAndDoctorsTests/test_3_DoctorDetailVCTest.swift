@@ -7,9 +7,11 @@
 //
 
 import XCTest
+@testable import ClinicsAndDoctors
 
-class DoctorDetailVCTest: XCTestCase {
+class test_3_DoctorDetailVCTest: XCTestCase {
   var vc:DoctorDetailVC!
+  
   var doctor:DoctorModel {
     
     let d = DoctorModel()
@@ -29,10 +31,11 @@ class DoctorDetailVCTest: XCTestCase {
 
     return d
   }
+  
   override func setUp() {
     
     super.setUp()
-    let sb = UIStoryboard(name: "Main", bundle: Bundle(for: self.classForCoder))
+    let sb = UIStoryboard(name: "Main", bundle: Bundle(for: DoctorDetailVC.self))
     vc = sb.instantiateViewController(withIdentifier: "DoctorDetailVC") as! DoctorDetailVC
     _ = vc.view
     
@@ -45,7 +48,15 @@ class DoctorDetailVCTest: XCTestCase {
   }
   
   func testLoad() {
-    XCTAssert(vc.view == nil, "Load Failed")
+    XCTAssert(vc.view != nil, "Load Failed")
+  }
+  
+  func testUpdateWithUser() {
+    vc.updateWith(doctor: self.doctor)
+    XCTAssert(vc.nameLb.text == self.doctor.full_name, "Names are not equal")
+    XCTAssert(vc.especialityLb.text == "Vet - Ginecology", "Types are not equal")
+    XCTAssert(vc.phoneBt.isHidden == false)
+    XCTAssert(vc.addFavoriteBt.isSelected == false)
   }
   
   func testExample() {

@@ -8,7 +8,7 @@
 
 import XCTest
 
-class ClinicsAndDoctorsTests: XCTestCase {
+class test_1_ClinicsAndDoctorsTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
