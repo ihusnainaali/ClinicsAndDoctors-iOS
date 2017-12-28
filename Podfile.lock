@@ -1,0 +1,109 @@
+PODS:
+  - AELog (0.3.0)
+  - Alamofire (4.6.0)
+  - AlamofireImage (3.3.0):
+    - Alamofire (~> 4.5)
+  - ARSLineProgress (2.1.1)
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - ClusterKit (0.3.2):
+    - ClusterKit/Core (= 0.3.2)
+  - ClusterKit/Core (0.3.2)
+  - Cosmos (12.0.1)
+  - FBSDKCoreKit (4.29.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.29.0):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.29.0):
+    - FBSDKCoreKit
+  - GoogleMaps (2.5.0):
+    - GoogleMaps/Maps (= 2.5.0)
+  - GoogleMaps/Base (2.5.0)
+  - GoogleMaps/Maps (2.5.0):
+    - GoogleMaps/Base
+  - NVActivityIndicatorView (4.0.1):
+    - NVActivityIndicatorView/Presenter (= 4.0.1)
+  - NVActivityIndicatorView/Presenter (4.0.1)
+  - PKHUD (5.0.0)
+  - PromiseKit (4.5.0):
+    - PromiseKit/Foundation (= 4.5.0)
+    - PromiseKit/QuartzCore (= 4.5.0)
+    - PromiseKit/UIKit (= 4.5.0)
+  - PromiseKit/Alamofire (4.5.0):
+    - Alamofire (~> 4.0)
+    - PromiseKit/CorePromise
+  - PromiseKit/CorePromise (4.5.0)
+  - PromiseKit/Foundation (4.5.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.5.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.5.0):
+    - PromiseKit/CorePromise
+  - Realm (3.0.2):
+    - Realm/Headers (= 3.0.2)
+  - Realm/Headers (3.0.2)
+  - RealmSwift (3.0.2):
+    - Realm (= 3.0.2)
+  - SideMenu (3.1.5)
+  - SwiftyJSON (4.0.0)
+  - TPKeyboardAvoiding (1.3.2)
+  - YYCache (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
+
+DEPENDENCIES:
+  - AELog
+  - Alamofire (~> 4.0)
+  - AlamofireImage (~> 3.2)
+  - ARSLineProgress
+  - ClusterKit
+  - Cosmos (~> 12.0)
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - FBSDKShareKit
+  - GoogleMaps
+  - NVActivityIndicatorView
+  - PKHUD
+  - PromiseKit
+  - PromiseKit/Alamofire (~> 4.0)
+  - RealmSwift
+  - SideMenu
+  - SwiftyJSON
+  - TPKeyboardAvoiding
+  - YYWebImage
+
+SPEC CHECKSUMS:
+  AELog: 69608a89a1d0460ad32bba73f8e1043e12764d85
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  ARSLineProgress: 688f3fe810515200186cebee349e06f822575fe6
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  ClusterKit: b98e3f15297aa761dabc1fbe7870a684a16a3aee
+  Cosmos: 4a9f57998a08788a1062c7b8eefbc62d2b590f39
+  FBSDKCoreKit: 6f139173dc63a1deaff4430a55f2fe5bb222d2af
+  FBSDKLoginKit: 56a057ca6822535ea0faa25f57a7c41edb697fd4
+  FBSDKShareKit: 18a2cd118aef11dd657fe7e8b64bae5c719088b2
+  GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
+  NVActivityIndicatorView: 77ed6d7b571643e24899e7858bf9ae2ee4c21f31
+  PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
+  PromiseKit: 9c1d9f6d7b65e3951a90bea7f407c56972be5d8e
+  Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
+  RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
+  SideMenu: 47dbf9e4d878062d8994aed43f6e4bf6c1fea30b
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  TPKeyboardAvoiding: cb69d5ddbe90ce0170e4bc2db1e5e41d4a3ad9a4
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
+
+PODFILE CHECKSUM: a6e1ba56c8204411b048ba4120268026bdd60548
+
+COCOAPODS: 1.3.1
