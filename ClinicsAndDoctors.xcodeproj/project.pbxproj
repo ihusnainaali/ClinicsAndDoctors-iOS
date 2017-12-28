@@ -20,7 +20,9 @@
 		BB24D4E41FF56B2600DBBD7D /* test_3_DoctorDetailVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1BAFAD1FF55A2B005D3CAE /* test_3_DoctorDetailVCTest.swift */; };
 		BB24D4E61FF57F8B00DBBD7D /* test_4_WhatsappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB24D4E51FF57F8B00DBBD7D /* test_4_WhatsappTests.swift */; };
 		BB24D4E81FF580AC00DBBD7D /* test_5_UIColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB24D4E71FF580AC00DBBD7D /* test_5_UIColorExtensionTests.swift */; };
-		BB24D4EA1FF5833E00DBBD7D /* test_6_HomeVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB24D4E91FF5833D00DBBD7D /* test_6_HomeVCTest.swift */; };
+		BB24D4EA1FF5833E00DBBD7D /* test_6_TermsPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB24D4E91FF5833D00DBBD7D /* test_6_TermsPolicyVC.swift */; };
+		BB24D4EC1FF58B2100DBBD7D /* test_7_ReviewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB24D4EB1FF58B2100DBBD7D /* test_7_ReviewsVC.swift */; };
+		BB24D4EE1FF5921600DBBD7D /* test_8_ClinincDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB24D4ED1FF5921500DBBD7D /* test_8_ClinincDetailVC.swift */; };
 		FB02285A1F8675F500853B1B /* CustomInfoVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0228591F8675F500853B1B /* CustomInfoVIew.swift */; };
 		FB02285E1F8676C700853B1B /* CustomInfoVIewX.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB02285D1F8676C700853B1B /* CustomInfoVIewX.xib */; };
 		FB3E548F1F81B64900DF65BA /* SpecialityButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3E548E1F81B64900DF65BA /* SpecialityButtonCell.swift */; };
@@ -160,7 +162,9 @@
 		BB24D4DF1FF567A700DBBD7D /* test_2_HomeVCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_2_HomeVCTest.swift; sourceTree = "<group>"; };
 		BB24D4E51FF57F8B00DBBD7D /* test_4_WhatsappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_4_WhatsappTests.swift; sourceTree = "<group>"; };
 		BB24D4E71FF580AC00DBBD7D /* test_5_UIColorExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_5_UIColorExtensionTests.swift; sourceTree = "<group>"; };
-		BB24D4E91FF5833D00DBBD7D /* test_6_HomeVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test_6_HomeVCTest.swift; sourceTree = "<group>"; };
+		BB24D4E91FF5833D00DBBD7D /* test_6_TermsPolicyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test_6_TermsPolicyVC.swift; sourceTree = "<group>"; };
+		BB24D4EB1FF58B2100DBBD7D /* test_7_ReviewsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test_7_ReviewsVC.swift; sourceTree = "<group>"; };
+		BB24D4ED1FF5921500DBBD7D /* test_8_ClinincDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test_8_ClinincDetailVC.swift; sourceTree = "<group>"; };
 		DFB51173399C1065925ED638 /* Pods_ClinicsAndDoctorsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClinicsAndDoctorsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0228591F8675F500853B1B /* CustomInfoVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomInfoVIew.swift; path = VC/Cell/CustomInfoVIew.swift; sourceTree = "<group>"; };
 		FB02285D1F8676C700853B1B /* CustomInfoVIewX.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomInfoVIewX.xib; path = VC/Cell/CustomInfoVIewX.xib; sourceTree = "<group>"; };
@@ -332,7 +336,9 @@
 				BB1BAFAD1FF55A2B005D3CAE /* test_3_DoctorDetailVCTest.swift */,
 				BB24D4E51FF57F8B00DBBD7D /* test_4_WhatsappTests.swift */,
 				BB24D4E71FF580AC00DBBD7D /* test_5_UIColorExtensionTests.swift */,
-				BB24D4E91FF5833D00DBBD7D /* test_6_HomeVCTest.swift */,
+				BB24D4E91FF5833D00DBBD7D /* test_6_TermsPolicyVC.swift */,
+				BB24D4EB1FF58B2100DBBD7D /* test_7_ReviewsVC.swift */,
+				BB24D4ED1FF5921500DBBD7D /* test_8_ClinincDetailVC.swift */,
 				BB1BAF681FF55536005D3CAE /* Info.plist */,
 			);
 			path = ClinicsAndDoctorsTests;
@@ -890,8 +896,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB24D4E21FF56B2200DBBD7D /* test_1_ClinicsAndDoctorsTests.swift in Sources */,
+				BB24D4EE1FF5921600DBBD7D /* test_8_ClinincDetailVC.swift in Sources */,
 				BB24D4E31FF56B2400DBBD7D /* test_2_HomeVCTest.swift in Sources */,
-				BB24D4EA1FF5833E00DBBD7D /* test_6_HomeVCTest.swift in Sources */,
+				BB24D4EC1FF58B2100DBBD7D /* test_7_ReviewsVC.swift in Sources */,
+				BB24D4EA1FF5833E00DBBD7D /* test_6_TermsPolicyVC.swift in Sources */,
 				BB24D4E61FF57F8B00DBBD7D /* test_4_WhatsappTests.swift in Sources */,
 				BB24D4E81FF580AC00DBBD7D /* test_5_UIColorExtensionTests.swift in Sources */,
 				BB24D4E41FF56B2600DBBD7D /* test_3_DoctorDetailVCTest.swift in Sources */,
