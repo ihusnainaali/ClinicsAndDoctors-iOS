@@ -53,6 +53,10 @@
                BlueprintName = "ClinicsAndDoctorsUITests"
                ReferencedContainer = "container:ClinicsAndDoctors.xcodeproj">
             </BuildableReference>
+            <LocationScenarioReference
+               identifier = "../ClinicsAndDoctors/Location.gpx"
+               referenceType = "0">
+            </LocationScenarioReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>

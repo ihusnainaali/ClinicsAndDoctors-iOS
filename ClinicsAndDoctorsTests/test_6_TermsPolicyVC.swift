@@ -32,14 +32,15 @@ class test_6_TermsPolicyVC: XCTestCase {
   
   func testLoadTermData() {
     vc.isTerms = true
+    vc.textView.text = ""
     vc.loadData()
     
-    while vc.textView.text.isEmpty == false
+    while vc.textView.text.isEmpty == true
       {
       RunLoop.current.run(mode: .defaultRunLoopMode, before: Date.distantFuture)
     }
     
-    XCTAssert(SpecialityModel.specialities.isEmpty == false, "Should load text")
+    XCTAssert(vc.textView.text.isEmpty == false, "Should load text")
   }
   
   func testLoadPrivacyData() {
@@ -47,12 +48,12 @@ class test_6_TermsPolicyVC: XCTestCase {
     vc.textView.text = ""
     vc.loadData()
     
-    while vc.textView.text.isEmpty == false
+    while vc.textView.text.isEmpty == true
     {
       RunLoop.current.run(mode: .defaultRunLoopMode, before: Date.distantFuture)
     }
     
-    XCTAssert(SpecialityModel.specialities.isEmpty == false, "Should load text")
+    XCTAssert(vc.textView.text.isEmpty == false, "Should load text")
   }
 
   func testPerformanceExample() {

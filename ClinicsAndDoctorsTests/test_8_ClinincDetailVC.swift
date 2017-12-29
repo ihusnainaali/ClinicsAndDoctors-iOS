@@ -28,6 +28,8 @@ class test_8_ClinincVC: XCTestCase {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     super.tearDown()
     UIApplication.shared.keyWindow?.rootViewController = oldVC
+    UserModel.currentUser = nil
+
   }
 
   func testLoadPrivacyData() {

@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ClinicsAndDoctors/Helpers/ISClient.swift"
-            timestampString = "536186980.62419"
+            timestampString = "536206237.456043"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "607"
@@ -42,13 +42,155 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ClinicsAndDoctors/Helpers/ISClient.swift"
-            timestampString = "536186980.625035"
+            timestampString = "536206237.456736"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "627"
             endingLineNumber = "627"
             landmarkName = "getReviews(clinicOrDoctorId:objType:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ClinicsAndDoctors/TermsPolicyVC.swift"
+            timestampString = "536199371.983941"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "loadData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ClinicsAndDoctorsTests/test_6_TermsPolicyVC.swift"
+            timestampString = "536206866.159974"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "testLoadPrivacyData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ClinicsAndDoctorsTests.test_6_TermsPolicyVC.testLoadPrivacyData() -&gt; ()"
+                  moduleName = "ClinicsAndDoctorsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hernanpaez/Proyectos/clinicsanddoctors/ClinicsAndDoctorsTests/test_6_TermsPolicyVC.swift"
+                  timestampString = "536206492.892691"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "1811">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.Bool in ClinicsAndDoctorsTests.test_6_TermsPolicyVC.testLoadPrivacyData() -&gt; ()"
+                  moduleName = "ClinicsAndDoctorsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hernanpaez/Proyectos/clinicsanddoctors/ClinicsAndDoctorsTests/test_6_TermsPolicyVC.swift"
+                  timestampString = "536206492.894585"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 : @autoclosure () -&gt; Swift.String in ClinicsAndDoctorsTests.test_6_TermsPolicyVC.testLoadPrivacyData() -&gt; ()"
+                  moduleName = "ClinicsAndDoctorsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hernanpaez/Proyectos/clinicsanddoctors/ClinicsAndDoctorsTests/test_6_TermsPolicyVC.swift"
+                  timestampString = "536206492.896493"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "21">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ClinicsAndDoctorsTests/test_6_TermsPolicyVC.swift"
+            timestampString = "536206866.160384"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "testLoadTermData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ClinicsAndDoctorsTests.test_6_TermsPolicyVC.testLoadTermData() -&gt; ()"
+                  moduleName = "ClinicsAndDoctorsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hernanpaez/Proyectos/clinicsanddoctors/ClinicsAndDoctorsTests/test_6_TermsPolicyVC.swift"
+                  timestampString = "536206492.899368"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "1814">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.Bool in ClinicsAndDoctorsTests.test_6_TermsPolicyVC.testLoadTermData() -&gt; ()"
+                  moduleName = "ClinicsAndDoctorsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hernanpaez/Proyectos/clinicsanddoctors/ClinicsAndDoctorsTests/test_6_TermsPolicyVC.swift"
+                  timestampString = "536206492.901657"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 : @autoclosure () -&gt; Swift.String in ClinicsAndDoctorsTests.test_6_TermsPolicyVC.testLoadTermData() -&gt; ()"
+                  moduleName = "ClinicsAndDoctorsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hernanpaez/Proyectos/clinicsanddoctors/ClinicsAndDoctorsTests/test_6_TermsPolicyVC.swift"
+                  timestampString = "536206492.905268"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "21">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
