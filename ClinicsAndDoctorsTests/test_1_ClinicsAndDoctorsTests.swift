@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import ClinicsAndDoctors
 
 class test_1_ClinicsAndDoctorsTests: XCTestCase {
     
@@ -20,7 +21,14 @@ class test_1_ClinicsAndDoctorsTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testRoundedButton() {
+      let button = RoundedButton(frame: CGRect.zero)
+      button.borderColor = "#ffffff"
+      button.borderW = 1
+      
+      XCTAssert(button.borderW == 1, "Border With of bordered button is different")
+      XCTAssert(button.borderColor == "#ffffff", "Border Color of bordered button is different")
+
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }

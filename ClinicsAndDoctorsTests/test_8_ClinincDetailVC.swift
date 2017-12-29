@@ -38,12 +38,5 @@ class test_8_ClinincVC: XCTestCase {
     
     XCTAssert(ClinicModel.by(id: vc.clinicId) != nil, "Should load clinic")
   }
-
-  func testPerformanceExample() {
-    // This is an example of a performance test case.
-    self.measure {
-      // Put the code you want to measure the time of here.
-    }
-  }
   
 }

@@ -30,26 +30,54 @@ class test_2_HomeVCTest: XCTestCase {
     UIApplication.shared.keyWindow?.rootViewController = oldVC
   }
   
-  func testLoadData() {
-    vc.loadData()
-    
-    while SpecialityModel.specialities.isEmpty ||
-      ClinicModel.clinics.isEmpty ||
-      DoctorModel.doctors.isEmpty
-      {
-      RunLoop.current.run(mode: .defaultRunLoopMode, before: Date.distantFuture)
+  func testSpecialityLoad() {
+    let exp = expectation(description: "speciality load")
+    vc.loadSpecialitys()
+      .then { _ -> Void in
+        XCTAssert(self.vc.specialitysNames.isEmpty == false, "Should load Specialities")
+        exp.fulfill()
     }
     
-    XCTAssert(SpecialityModel.specialities.isEmpty == false, "Should load Specialities")
-    XCTAssert(ClinicModel.clinics.isEmpty == false, "Should load Clinics")
-    XCTAssert(DoctorModel.doctors.isEmpty == false, "Should load Doctors")
+    waitForExpectations(timeout: 60, handler: nil)
   }
   
-  func testPerformanceExample() {
-    // This is an example of a performance test case.
-    self.measure {
-      // Put the code you want to measure the time of here.
+  func testClinicsLoad() {
+    let exp = expectation(description: "speciality load")
+    vc.loadClinics(radius: 10000000)
+      .then { _ -> Void in
+        XCTAssert(ClinicModel.clinics.isEmpty == false, "Should load Clinics")
+        exp.fulfill()
     }
+    
+    waitForExpectations(timeout: 60, handler: nil)
   }
+
+  func testDoctorLoad() {
+    let exp = expectation(description: "speciality load")
+    vc.loadDoctors(specialityId: nil, clinicId: nil)
+      .then { _ -> Void in
+        XCTAssert(DoctorModel.doctors.isEmpty == false, "Should load Doctors")
+        exp.fulfill()
+    }
+    
+    waitForExpectations(timeout: 60, handler: nil)
+  }
+
+  
+//  func testLoadData() {
+//    vc.loadData()
+//
+//    while SpecialityModel.specialities.isEmpty ||
+//      ClinicModel.clinics.isEmpty ||
+//      DoctorModel.doctors.isEmpty
+//    {
+//      RunLoop.current.run(mode: .defaultRunLoopMode, before: Date.distantFuture)
+//    }
+//
+//    XCTAssert(SpecialityModel.specialities.isEmpty == false, "Should load Specialities")
+//    XCTAssert(ClinicModel.clinics.isEmpty == false, "Should load Clinics")
+//    XCTAssert(DoctorModel.doctors.isEmpty == false, "Should load Doctors")
+//  }
+  
   
 }

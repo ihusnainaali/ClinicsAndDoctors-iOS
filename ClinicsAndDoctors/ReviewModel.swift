@@ -19,11 +19,6 @@ class ReviewModel: NSObject {
     var rating: Float!
     var user: UserModel!
 
-
-
-    override init() {
-    }
-
     required init(representationJSON:SwiftyJSON.JSON) {
         self.id = representationJSON["id"].stringValue
         self.created_date_time = representationJSON["created_date_time"].stringValue
