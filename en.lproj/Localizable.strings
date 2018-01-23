@@ -9,9 +9,9 @@
 
 "Wrong mobile or password" = "Wrong mobile or password";
 "Network error ocurred" = "Network error ocurred";
-"Register error. Please tray again with another credentials" = "Register error. Please tray again with another credentials";
+"Register error. Please try again with another credentials" = "Register error. Please try again with another credentials";
 "The specified user does not exist" = "The specified user does not exist";
-"Register error. Please tray again" = "Register error. Please tray again";
+"Register error. Please try again" = "Register error. Please try again";
 "No specialties found" = "No specialties found";
 "Server error ocurred" = "Server error ocurred";
 "Must be logged in" = "Must be logged in";

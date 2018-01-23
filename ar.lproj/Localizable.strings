@@ -9,9 +9,9 @@
 
 "Wrong mobile or password" = "كلمة مرور أو كلمة مرور خاطئة";
 "Network error ocurred" = "حدث خطأ في الشبكة";
-"Register error. Please tray again with another credentials" = "الرجاء إعادة المحاولة باستخدام بيانات اعتماد أخرى";
+"Register error. Please try again with another credentials" = "الرجاء إعادة المحاولة باستخدام بيانات اعتماد أخرى";
 "The specified user does not exist" = "عدم وجود المستخدم المحدد";
-"Register error. Please tray again" = "سجل خطأ. حاول مرة اخرى";
+"Register error. Please try again" = "سجل خطأ. حاول مرة اخرى";
 "No specialties found" = "لم يتم العثور على أية تخصصات";
 "Server error ocurred" = "حدث خطأ في الخادم";
 "Must be logged in" = "يجب تسجيل الدخول";

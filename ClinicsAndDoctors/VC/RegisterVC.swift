@@ -81,7 +81,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate, UIImagePickerController
         }
         else if !isValidPhone(testStr: phone_numberTf.text!){
             //self.phone_numberTf.textColor = .red
-            self.SwiftMessageAlert(layout: .cardView, theme: .error, title: "", body: "Wrong Movile, it should only be between 6 and 14 numbers".localized)
+            self.SwiftMessageAlert(layout: .cardView, theme: .error, title: "", body: "Wrong Mobile, it should only be between 6 and 14 numbers".localized)
         }
         else if passwordTf.text != passwordCheckTf.text{
             self.SwiftMessageAlert(layout: .cardView, theme: .error, title: "", body: "The password and Re-Type Password are not same, please check".localized)

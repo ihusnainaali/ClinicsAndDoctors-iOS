@@ -25,7 +25,7 @@ class LPError : Error {
     func show(){
         let alert = MessageView.viewFromNib(layout: .cardView)
         alert.configureTheme(.error)
-        alert.configureContent(title: "ClinicsAndDoctors", body: self.description)
+        alert.configureContent(body: self.description)
         alert.button?.isHidden = true
         alert.configureDropShadow()
         SwiftMessages.show(view: alert)
@@ -123,7 +123,7 @@ class ISClient: NSObject {
 
                             fulfill(UserModel.currentUser!)
                         }else{
-                            reject(LPError(code: "error", description: "Register error. Please tray again with another credentials".localized))
+                            reject(LPError(code: "error", description: "Register error. Please try again with another credentials".localized))
                         }
 
                     case .failure(_):
@@ -196,7 +196,7 @@ class ISClient: NSObject {
 
                                 fulfill(UserModel.currentUser!)
                             }else{
-                                reject(LPError(code: "error", description: "Register error. Please tray again".localized))
+                                reject(LPError(code: "error", description: "Register error. Please try again".localized))
                             }
                         }
 
