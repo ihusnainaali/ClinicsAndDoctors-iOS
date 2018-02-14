@@ -659,7 +659,7 @@
         <!--About Us-->
         <scene sceneID="Vu0-pg-cBV">
             <objects>
-                <viewController title="About Us" id="wBT-Rr-gto" sceneMemberID="viewController">
+                <viewController title="About Us" id="wBT-Rr-gto" customClass="AboutVC" customModule="ClinicsAndDoctors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Stl-Oj-i3x"/>
                         <viewControllerLayoutGuide type="bottom" id="oxa-j6-AxS"/>
@@ -675,6 +675,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="aboutImageView" destination="rbU-Cx-9KS" id="qBF-ho-KEu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17E-g0-ebm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2623,7 +2626,7 @@
     <resources>
         <image name="EmptyListLogo" width="382" height="528"/>
         <image name="Logo2" width="382" height="528"/>
-        <image name="about" width="750" height="1135"/>
+        <image name="about" width="359" height="485"/>
         <image name="backIcon" width="15" height="25"/>
         <image name="circle_line_progress" width="387" height="387"/>
         <image name="emptyProfile" width="125" height="125"/>
