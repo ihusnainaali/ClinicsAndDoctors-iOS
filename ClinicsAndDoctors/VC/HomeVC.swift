@@ -36,6 +36,7 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     @IBOutlet weak var defaultLbl: UILabel!
     @IBOutlet weak var searchBtn: UIButton!
 
+    var currentCamPos:CLLocation!
     var searchView : SearchView? = nil
     var topSearch:CGFloat = 0
 
@@ -287,7 +288,9 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     }
 
     func loadData(){
-        NVActivityIndicatorPresenter.sharedInstance.startAnimating(loading)
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+
+        //NVActivityIndicatorPresenter.sharedInstance.startAnimating(loading)
 
         let spec = SpecialityModel.by(name: self.specialitysNames[self.currentSelectedEspec])
 
@@ -305,22 +308,23 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
                 self.updateDefaultView()
 
             }.always {
-                NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                //NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
             }.catch { error in
 
                 if let e: LPError = error as? LPError { e.show() }
 
-                DispatchQueue.main.asyncAfter(
-                    deadline: DispatchTime.now() + 1, execute: {
-
-                        let alert = UIAlertController(title:"Clinics And Doctors", message: "Error loading from server. Please, try again.".localized, preferredStyle: .alert)
-
-                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {[weak self] action in
-                            self?.loadData()
-                        }))
-
-                        self.present(alert, animated: true, completion: nil)
-                })
+//                DispatchQueue.main.asyncAfter(
+//                    deadline: DispatchTime.now() + 1, execute: {
+//
+//                        let alert = UIAlertController(title:"Clinics And Doctors", message: "Error loading from server. Please, try again.".localized, preferredStyle: .alert)
+//
+//                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {[weak self] action in
+//                            self?.loadData()
+//                        }))
+//
+//                        self.present(alert, animated: true, completion: nil)
+//                })
         }
 
     }
@@ -347,7 +351,7 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     }
     
     func loadClinics(radius: Int, specialityId: String? = nil) -> Promise<Void>{
-        let location = locationManager.location ?? CLLocation(latitude: 0, longitude: 0)
+        let location =  currentCamPos ??  CLLocation(latitude: 0, longitude: 0) // locationManager.location ?? CLLocation(latitude: 0, longitude: 0)
         return ISClient.sharedInstance.getClinics(latitude: location.coordinate.latitude,
                                                   longitude: location.coordinate.longitude,
                                                   radius: radius,
@@ -411,6 +415,8 @@ extension HomeVC {
         myMap.dataSource = self
 
     }
+
+
 
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
         if marker != self.myPoint {
@@ -526,6 +532,27 @@ extension HomeVC {
 
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
         mapView.clusterManager.updateClustersIfNeeded()
+
+
+        self.currentCamPos = CLLocation(latitude: position.target.latitude, longitude: position.target.longitude)
+
+        self.loadData()
+
+//        if let distance = UserModel.mylocation?.distance(from: camPos) {
+//
+//            print("distance: \(distance),  radio: \(Double(UserModel.radiusLocationMeters))")
+//
+//            if distance > Double(UserModel.radiusLocationMeters) {
+//
+//                print("RELOADDDDDDDD")
+//                self.loadData()
+//
+//            }
+//
+//        }
+
+
+
     }
 
 
