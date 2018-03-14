@@ -31,6 +31,10 @@ class ReviewsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+
+    self.navigationController?.navigationBar.isHidden = false
+
+
     loadInfo()
   }
   
@@ -114,7 +118,7 @@ class ReviewsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     else{
       
-      self.SwiftMessageAlert(layout: .cardView, theme: .info, title: "ClinicsAndDoctors", body: "Must be logged in first".localized)
+      self.SwiftMessageAlert(layout: .cardView, theme: .info, title: "Click Doc", body: "Must be logged in first".localized)
       
       DispatchQueue.main.asyncAfter(deadline: DispatchTime.now(), execute: {[weak self] in
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

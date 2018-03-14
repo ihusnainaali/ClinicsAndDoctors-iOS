@@ -132,7 +132,9 @@ class LeftMenuVC: UIViewController {
     }
 
     func pressentLogin(_ futureVC:String = ""){
-        self.SwiftMessageAlert(layout: .cardView, theme: .info, title: "ClinicsAndDoctors", body: "Must be logged in first".localized)
+        if !futureVC.isEmpty {
+            self.SwiftMessageAlert(layout: .cardView, theme: .info, title: "Click Doc", body: "Must be logged in first".localized)
+        }
 
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now(), execute: {[weak self] in
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
