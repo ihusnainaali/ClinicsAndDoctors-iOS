@@ -148,7 +148,7 @@ class ClinincDetailVC: UIViewController, UICollectionViewDataSource, UICollectio
     if let phoneCallURL:URL = URL(string: "tel:\(strPhoneNumber)") {
       let application:UIApplication = UIApplication.shared
       if (application.canOpenURL(phoneCallURL)) {
-        let alertController = UIAlertController(title: "ClinicsAndDoctors", message: "Are you sure you want to call".localized + " \n\(clinic.phone_number!)?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Click Doc", message: "Are you sure you want to call".localized + " \n\(clinic.phone_number!)?", preferredStyle: .alert)
         let yesPressed = UIAlertAction(title: "Yes".localized, style: .default, handler: { (action) in
           UIApplication.shared.openURL(phoneCallURL)
         })
@@ -267,7 +267,7 @@ extension ClinincDetailVC {
       self.performSegue(withIdentifier: "toRating", sender: nil)
     }
     else{
-      self.SwiftMessageAlert(layout: .cardView, theme: .info, title: "ClinicsAndDoctors", body: "Must be logged in first".localized)
+      self.SwiftMessageAlert(layout: .cardView, theme: .info, title: "Click Doc", body: "Must be logged in first".localized)
       
       DispatchQueue.main.asyncAfter(deadline: DispatchTime.now(), execute: {[weak self] in
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -289,7 +289,7 @@ extension ClinincDetailVC {
     }
     else{
       
-      self.SwiftMessageAlert(layout: .cardView, theme: .info, title: "ClinicsAndDoctors", body: "Must be logged in first".localized)
+      self.SwiftMessageAlert(layout: .cardView, theme: .info, title: "Click Doc", body: "Must be logged in first".localized)
       
       DispatchQueue.main.asyncAfter(deadline: DispatchTime.now(), execute: {[weak self] in
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -313,7 +313,7 @@ extension ClinincDetailVC {
         .then { ok -> Void in
           
           if ok {
-            self.SwiftMessageAlert(layout: .cardView, theme: .success, title: "ClinicsAndDoctors", body: "Removed from favorites".localized)
+            self.SwiftMessageAlert(layout: .cardView, theme: .success, title: "Click Doc", body: "Removed from favorites".localized)
             
             ClinicModel.by(id: self.clinicId)?.is_favorite = false
             self.updateWith(clinic: ClinicModel.by(id: self.clinicId)!)
@@ -332,7 +332,7 @@ extension ClinincDetailVC {
         .then { ok -> Void in
           
           if ok {
-            self.SwiftMessageAlert(layout: .cardView, theme: .success, title: "ClinicsAndDoctors", body: "Added to favorites".localized)
+            self.SwiftMessageAlert(layout: .cardView, theme: .success, title: "Click Doc", body: "Added to favorites".localized)
             
             ClinicModel.by(id: self.clinicId)?.is_favorite = true
             self.updateWith(clinic: ClinicModel.by(id: self.clinicId)!)

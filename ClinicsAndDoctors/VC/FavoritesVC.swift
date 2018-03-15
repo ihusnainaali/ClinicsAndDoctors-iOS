@@ -151,7 +151,7 @@ extension FavoritesVC {
                 DispatchQueue.main.asyncAfter(
                     deadline: DispatchTime.now() + 1, execute: {
 
-                        let alert = UIAlertController(title:"ClinicsAndDoctors", message: "Error loading from server. Please, try again.".localized, preferredStyle: .alert)
+                        let alert = UIAlertController(title:"Click Doc", message: "Error loading from server. Please, try again.".localized, preferredStyle: .alert)
 
                         alert.addAction(UIAlertAction(title: "Ok".localized, style: .default, handler: {[weak self] action in
                             self?.reload()

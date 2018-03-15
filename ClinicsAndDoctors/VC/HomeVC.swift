@@ -263,7 +263,7 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         if let phoneCallURL:URL = URL(string: "tel:\(strPhoneNumber)") {
             let application:UIApplication = UIApplication.shared
             if (application.canOpenURL(phoneCallURL)) {
-                let alertController = UIAlertController(title: "ClinicsAndDoctors", message: "Are you sure you want to call".localized + " \n\(clinic.phone_number!)?", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Click Doc", message: "Are you sure you want to call".localized + " \n\(clinic.phone_number!)?", preferredStyle: .alert)
                 let yesPressed = UIAlertAction(title: "Yes".localized, style: .default, handler: { (action) in
                     UIApplication.shared.openURL(phoneCallURL)
                 })
@@ -763,8 +763,7 @@ extension HomeVC {
 extension HomeVC {
 
 
-    func openMapAction() {
-
+    func openInIosMaps(){
         guard let clinic = ClinicModel.by(id: tappedMarker.userData as! String) else { return }
         let pos = tappedMarker.position
 
@@ -779,6 +778,20 @@ extension HomeVC {
         let mapItem = MKMapItem(placemark: placemark)
         mapItem.name = clinic.full_name
         mapItem.openInMaps(launchOptions: options)
+    }
+
+    func openGoogleMaps() {
+        guard let clinic = ClinicModel.by(id: tappedMarker.userData as! String) else { return }
+        let pos = tappedMarker.position
+        UIApplication.shared.open(URL(string:"comgooglemaps://?center=\(pos.latitude),\(pos.longitude)&zoom=14&views=traffic&q=\(pos.latitude),\(pos.longitude)")!, options: [:], completionHandler: nil)
+    }
+
+    func openMapAction() {
+        if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+            openGoogleMaps()
+        }else{
+            openInIosMaps()
+        }
     }
 
 //    func drawPath() {
