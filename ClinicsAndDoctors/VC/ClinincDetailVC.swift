@@ -240,13 +240,7 @@ extension ClinincDetailVC {
     guard let clinic = ClinicModel.by(id: self.clinicId) else { return }
     
     var text = clinic.full_name ?? ""
-    if !clinic.address.isEmpty {
-      text = text + " - " + clinic.address
-    }
-    
-    if !clinic.phone_number.isEmpty {
-      text = text + " - " + clinic.phone_number
-    }
+    text = text + " - https://itunes.apple.com/us/app/click-doc/id1327941233?ls=1&mt=8"
     
     let textToShare = [ text ]
     let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)

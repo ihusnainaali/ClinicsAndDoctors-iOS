@@ -222,13 +222,7 @@ extension DoctorDetailVC {
     }
     
     var text = doctor.full_name ?? ""
-    if !speciality.isEmpty {
-      text = text + " - " + speciality
-    }
-    
-    if !doctor.phone_number.isEmpty {
-      text = text + " - " + doctor.phone_number
-    }
+    text = text + " - https://itunes.apple.com/us/app/click-doc/id1327941233?ls=1&mt=8"
     
     let textToShare = [ text ]
     let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
