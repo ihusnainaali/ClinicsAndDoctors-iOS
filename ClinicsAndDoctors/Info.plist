@@ -28,7 +28,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>FacebookAppID</key>
 	<string>141722709800382</string>
 	<key>FacebookDisplayName</key>
@@ -42,7 +42,7 @@
 		<string>fbauth2</string>
 		<string>fbshareextension</string>
 		<string>googlechromes</string>
-    	<string>comgooglemaps</string>
+		<string>comgooglemaps</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
