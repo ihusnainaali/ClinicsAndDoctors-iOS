@@ -23,6 +23,7 @@ class UserModel: NSObject {
     var profile_picture : String = ""
     var email : String = ""
     var id: String!
+    var fbSession:Bool = false
 
 
     static var mylocation:CLLocation?
@@ -38,6 +39,7 @@ class UserModel: NSObject {
         self.password = representationJSON["password"].stringValue
         self.profile_picture = representationJSON["picture"].stringValue
         self.email = representationJSON["email"].stringValue
+        self.fbSession = representationJSON["fbSession"].boolValue
         //self.access_token = representationJSON["access_token"].stringValue
     }
 
@@ -61,6 +63,7 @@ class UserModel: NSObject {
             dic["password"] = user.password as AnyObject
             dic["picture"] = user.profile_picture as AnyObject
             dic["email"] = user.email as AnyObject
+            dic["fbSession"] = user.fbSession as AnyObject
 
             UserDefaults.standard.set(dic, forKey: "sesion_user")
 

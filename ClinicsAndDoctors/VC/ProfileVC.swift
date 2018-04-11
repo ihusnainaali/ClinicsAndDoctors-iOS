@@ -30,14 +30,15 @@ class ProfileVC: UIViewController , UINavigationControllerDelegate, UIImagePicke
 
     var enableToEdit: Bool = false {
         didSet{
+            let fblogged = UserModel.currentUser!.fbSession
+
             nameTf.isEnabled = enableToEdit
             mobileTf.isEnabled = enableToEdit
-            emailTf.isEnabled = enableToEdit
+            emailTf.isEnabled = (enableToEdit && !fblogged)
             viewPlusBtn.isHidden = !enableToEdit
 
-            let fblogged = (FBSDKAccessToken.current() != nil)
-
             changePasswordBt.isHidden = (fblogged || enableToEdit == false)
+
         }
     }
 
@@ -305,7 +306,7 @@ extension ProfileVC {
         imagePicker.allowsEditing = true
         imagePicker.sourceType = .photoLibrary
         imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
-        imagePicker.modalPresentationStyle = .popover
+        imagePicker.modalPresentationStyle = .custom
         present(imagePicker, animated: true, completion: nil)
     }
 

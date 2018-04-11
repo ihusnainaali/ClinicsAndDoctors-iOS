@@ -188,27 +188,70 @@ extension DoctorDetailVC {
 // ==========================================
 
 extension DoctorDetailVC {
-  
+
+
+    func openInIosMaps(){
+
+        guard let doctor = DoctorModel.by(id: self.docId) else { return }
+        guard let clinic = ClinicModel.by(id: doctor.idClinic) else { return }
+
+        let pos = CLLocationCoordinate2DMake(clinic.latitude, clinic.longitude)
+
+        let regionDistance:CLLocationDistance = 10000
+        let coordinates = CLLocationCoordinate2DMake(pos.latitude, pos.longitude)
+        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = doctor.full_name + "\n" + clinic.full_name
+        mapItem.openInMaps(launchOptions: options)
+    }
+
+    func openGoogleMaps() {
+        guard let doctor = DoctorModel.by(id: self.docId) else { return }
+        guard let clinic = ClinicModel.by(id: doctor.idClinic) else { return }
+
+        let pos = CLLocationCoordinate2DMake(clinic.latitude, clinic.longitude)
+        UIApplication.shared.open(URL(string:"comgooglemaps://?center=\(pos.latitude),\(pos.longitude)&zoom=14&views=traffic&q=\(pos.latitude),\(pos.longitude)")!, options: [:], completionHandler: nil)
+    }
+
+    func openMapAction() {
+        if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+            openGoogleMaps()
+        }else{
+            openInIosMaps()
+        }
+    }
+
+
+
+
+
   
   
   @IBAction func openMapAction(_ sender: Any) {
-    
-    guard let doctor = DoctorModel.by(id: self.docId) else { return }
-    
-    guard let clinic = ClinicModel.by(id: doctor.idClinic) else { return }
-    
-    
-    let regionDistance:CLLocationDistance = 10000
-    let coordinates = CLLocationCoordinate2DMake(clinic.latitude, clinic.longitude)
-    let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
-    let options = [
-      MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
-      MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
-    ]
-    let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
-    let mapItem = MKMapItem(placemark: placemark)
-    mapItem.name = doctor.full_name + "\n" + clinic.full_name
-    mapItem.openInMaps(launchOptions: options)
+
+    openMapAction()
+
+//    guard let doctor = DoctorModel.by(id: self.docId) else { return }
+//
+//    guard let clinic = ClinicModel.by(id: doctor.idClinic) else { return }
+//
+//
+//    let regionDistance:CLLocationDistance = 10000
+//    let coordinates = CLLocationCoordinate2DMake(clinic.latitude, clinic.longitude)
+//    let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+//    let options = [
+//      MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+//      MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+//    ]
+//    let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+//    let mapItem = MKMapItem(placemark: placemark)
+//    mapItem.name = doctor.full_name + "\n" + clinic.full_name
+//    mapItem.openInMaps(launchOptions: options)
   }
   
   

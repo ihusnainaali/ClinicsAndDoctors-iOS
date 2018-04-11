@@ -331,21 +331,24 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
 
 
     func loadSpecialitys() -> Promise<Void> {
-        SpecialityModel.specialities = [SpecialityModel]()
-
         return ISClient.sharedInstance.getSpecialtys()
             .then { specilityList -> Void in
                 if specilityList.isEmpty {
 
                 } else {
-                    SpecialityModel.specialities = specilityList
-                    self.specialitysNames = ["All"]
-                    for sp in SpecialityModel.specialities{
-                        self.specialitysNames.append(sp.name)
-                    }
 
-                    self.especialitysCollection.reloadData()
-                    //self.updateSpecialitySelection()
+                    if SpecialityModel.specialities.count != specilityList.count {
+
+                        //SpecialityModel.specialities = [SpecialityModel]()
+                        SpecialityModel.specialities = specilityList
+                        self.specialitysNames = ["All"]
+                        for sp in SpecialityModel.specialities{
+                            self.specialitysNames.append(sp.name)
+                        }
+
+                        self.especialitysCollection.reloadData()
+
+                    }
                 }
         }
     }
@@ -396,27 +399,19 @@ extension HomeVC {
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.requestAlwaysAuthorization()
             locationManager.requestWhenInUseAuthorization()
-        }
-        locationManager.requestWhenInUseAuthorization()
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.startUpdatingLocation()
-        }
 
-        DispatchQueue.main.async {
-            self.locationManager.startUpdatingLocation()
+            DispatchQueue.main.async {
+                self.locationManager.startUpdatingLocation()
+            }
         }
 
 
         let algorithm = CKNonHierarchicalDistanceBasedAlgorithm()
         algorithm.cellSize = 200
-
         myMap.clusterManager.algorithm = algorithm
         myMap.clusterManager.marginFactor = 1
         myMap.dataSource = self
-
     }
-
-
 
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
         if marker != self.myPoint {
@@ -508,25 +503,7 @@ extension HomeVC {
 
         let howRecent = eventDate?.timeIntervalSinceNow
         if fabs(howRecent!) < 15 {
-
-            if myPoint == nil{
-                myPoint = GMSMarker(position: currentLocation)
-                myPoint?.title = "My Location"
-
-                let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 56, height: 56))
-                imageView.layer.cornerRadius = imageView.frame.width/2
-                imageView.clipsToBounds = true
-                imageView.image = UIImage(named: "icon_location")
-                myPoint?.iconView = imageView
-                myPoint?.map = myMap
-
-                let camera = GMSCameraPosition.camera(withLatitude: latitude!, longitude: longitude!, zoom: 14.0)
-                myMap.animate(to: camera)
-
-            }
-            else {
-                myPoint?.position = currentLocation
-            }
+            updateMyLoc()
         }
     }
 
@@ -604,21 +581,39 @@ extension HomeVC {
             self.myMap.clusterManager.annotations.append(anot)
         }
 
+        updateMyLoc()
+    }
+
+    func updateMyLoc(){
+        if let loc = locationManager.location?.coordinate {
+            if myPoint==nil{
+                myPoint = GMSMarker(position: loc)
+                myPoint?.title = "My Location"
+                myPoint?.icon = #imageLiteral(resourceName: "icon_location")
+                myPoint?.map = myMap
+
+                let camera = GMSCameraPosition.camera(withLatitude: loc.latitude, longitude: loc.longitude, zoom: 14.0)
+                myMap.animate(to: camera)
+
+
+            }
+            else {
+                myPoint?.position = loc
+                myPoint?.icon = #imageLiteral(resourceName: "icon_location")
+                myPoint?.map = myMap
+            }
+
+        } else {
+            print("location no update")
+        }
+
     }
 
     @IBAction func ShowMyLocation(_ sende: AnyObject){
         if locationManager.location != nil {
-            if myPoint==nil{
-                myPoint = GMSMarker(position: (locationManager.location?.coordinate)!)
-                myPoint?.title = "My Location"
-                myPoint?.icon = #imageLiteral(resourceName: "icon_location")
-                myPoint?.map = myMap
-            }
-            else {
-                myPoint?.position = (locationManager.location?.coordinate)!
-                myPoint?.icon = #imageLiteral(resourceName: "icon_location")
-                myPoint?.map = myMap
-            }
+
+            updateMyLoc()
+
             let camera = GMSCameraPosition.camera(withLatitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!, zoom: 14.0)
             myMap.animate(to: camera)
         }
@@ -794,38 +789,6 @@ extension HomeVC {
         }
     }
 
-//    func drawPath() {
-//
-//        for pl in polylines {
-//            pl.map = nil
-//        }
-//        polylines = [GMSPolyline]()
-//
-//
-//        guard let currentLocation = UserModel.mylocation else { return }
-//        guard let clinic = ClinicModel.by(id: tappedMarker.userData as! String) else { return }
-//        let finalLoc:CLLocation = CLLocation(latitude: clinic.latitude, longitude: clinic.longitude)
-//        guard let key = UserDefaults.standard.string(forKey: "google_key") else { return }
-//
-//        let origin = "\(currentLocation.coordinate.latitude ),\(currentLocation.coordinate.longitude)"
-//        let destination = "\(finalLoc.coordinate.latitude ),\(finalLoc.coordinate.longitude)"
-//
-//        let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving&key=\(key)"
-//
-//        Alamofire.request(url).responseJSON {[weak self] response in
-//            let json = try! JSON(data: response.data!)
-//            let routes = json["routes"].arrayValue
-//
-//            for route in routes {
-//                let routeOverviewPolyline = route["overview_polyline"].dictionary
-//                let points = routeOverviewPolyline?["points"]?.stringValue
-//                let path = GMSPath.init(fromEncodedPath: points!)
-//                let polyline = GMSPolyline.init(path: path)
-//                polyline.map = self?.myMap
-//                self?.polylines.append(polyline)
-//            }
-//        }
-//    }
 
 }
 

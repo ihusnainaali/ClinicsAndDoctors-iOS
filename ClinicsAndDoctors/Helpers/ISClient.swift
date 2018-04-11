@@ -81,6 +81,7 @@ class ISClient: NSObject {
                         if js != JSON.null && js["code"].stringValue == "LOGIN_SUCCESSFUL" {
                             UserModel.currentUser = UserModel(representationJSON: js)
                             UserModel.currentUser?.password = password
+                            UserModel.currentUser?.fbSession = false
                             UserModel.saveSession()
 
                             fulfill(UserModel.currentUser!)
@@ -119,6 +120,7 @@ class ISClient: NSObject {
                         if js != JSON.null && js["code"].stringValue == "REGISTER_SUCCESSFUL" {
                             UserModel.currentUser = UserModel(representationJSON: js)
                             UserModel.currentUser?.password = password
+                            UserModel.currentUser?.fbSession = false
                             UserModel.saveSession()
 
                             fulfill(UserModel.currentUser!)
@@ -192,6 +194,7 @@ class ISClient: NSObject {
                             if js["code"].stringValue == "LOGIN_SUCCESSFUL" {
                                 UserModel.currentUser = UserModel(representationJSON: js)
                                 UserModel.currentUser?.password = ""
+                                UserModel.currentUser?.fbSession = true
                                 UserModel.saveSession()
 
                                 fulfill(UserModel.currentUser!)
@@ -480,8 +483,10 @@ class ISClient: NSObject {
                             if js["code"].stringValue == "EDIT_PROFILE_UNSUCCESSFUL" {
                                 reject(LPError(code: "error", description: "Unsuccessful profile editing".localized))
                             }else{
+                                let fb = UserModel.currentUser?.fbSession
                                 UserModel.currentUser = UserModel(representationJSON: js)
                                 UserModel.currentUser?.password = password ?? ""
+                                UserModel.currentUser?.fbSession = fb!
                                 UserModel.saveSession()
 
                                 fulfill(UserModel.currentUser!)
