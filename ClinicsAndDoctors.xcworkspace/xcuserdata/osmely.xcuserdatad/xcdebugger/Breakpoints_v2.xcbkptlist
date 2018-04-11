@@ -58,12 +58,12 @@
                   moduleName = "ClinicsAndDoctors"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/DATOS/DESARROLLO/PROYECTOS/INFINIXSOFTT/Clinics/Git/infinixsoft_clinicsanddoctors/ClinicsAndDoctors/Models/ClinicModel.swift"
-                  timestampString = "545151702.026271"
+                  timestampString = "545155334.7102309"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "125"
                   endingLineNumber = "125"
-                  offsetFromSymbolStart = "2280">
+                  offsetFromSymbolStart = "2958">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -73,12 +73,12 @@
                   moduleName = "ClinicsAndDoctors"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/DATOS/DESARROLLO/PROYECTOS/INFINIXSOFTT/Clinics/Git/infinixsoft_clinicsanddoctors/ClinicsAndDoctors/Models/ClinicModel.swift"
-                  timestampString = "545151702.033276"
+                  timestampString = "545155334.718523"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "125"
                   endingLineNumber = "125"
-                  offsetFromSymbolStart = "32">
+                  offsetFromSymbolStart = "25">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ClinicsAndDoctors/Helpers/ISClient.swift"
-            timestampString = "545151701.160609"
+            timestampString = "545155333.188185"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "737"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ClinicsAndDoctors/Helpers/ISClient.swift"
-            timestampString = "545151701.160809"
+            timestampString = "545155333.188656"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "712"

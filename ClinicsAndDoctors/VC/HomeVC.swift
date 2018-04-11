@@ -67,7 +67,7 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
 
         FBSDKLoginManager().logOut()
 
-        configureSearch()
+
 
         self.title = ""
 
@@ -122,6 +122,8 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         fm.origin.y += delta
         fm.size.height -= delta
         self.defaultView.frame = fm
+
+        configureSearch()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -253,7 +255,6 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     @IBAction func GoMap(_ sender: AnyObject){
         self.infoView.removeFromSuperview()
 
-
         guard let clinic = ClinicModel.by(id: tappedMarker.userData as! String) else { return }
 
         var strPhoneNumber = clinic.phone_number!
@@ -276,7 +277,7 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
             }
         }
 
-        //self.drawPath()
+
     }
 
     func updateDefaultView(){
@@ -288,9 +289,8 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     }
 
     func loadData(){
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
 
-        //NVActivityIndicatorPresenter.sharedInstance.startAnimating(loading)
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
 
         let spec = SpecialityModel.by(name: self.specialitysNames[self.currentSelectedEspec])
 
@@ -309,23 +309,12 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
 
             }.always {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                //NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
+
             }.catch { error in
 
                 if let e: LPError = error as? LPError { e.show() }
 
-//                DispatchQueue.main.asyncAfter(
-//                    deadline: DispatchTime.now() + 1, execute: {
-//
-//                        let alert = UIAlertController(title:"Clinics And Doctors", message: "Error loading from server. Please, try again.".localized, preferredStyle: .alert)
-//
-//                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {[weak self] action in
-//                            self?.loadData()
-//                        }))
-//
-//                        self.present(alert, animated: true, completion: nil)
-//                })
-        }
+            }
 
     }
 
@@ -509,27 +498,8 @@ extension HomeVC {
 
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
         mapView.clusterManager.updateClustersIfNeeded()
-
-
         self.currentCamPos = CLLocation(latitude: position.target.latitude, longitude: position.target.longitude)
-
         self.loadData()
-
-//        if let distance = UserModel.mylocation?.distance(from: camPos) {
-//
-//            print("distance: \(distance),  radio: \(Double(UserModel.radiusLocationMeters))")
-//
-//            if distance > Double(UserModel.radiusLocationMeters) {
-//
-//                print("RELOADDDDDDDD")
-//                self.loadData()
-//
-//            }
-//
-//        }
-
-
-
     }
 
 

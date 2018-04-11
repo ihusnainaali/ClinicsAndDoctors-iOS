@@ -57,11 +57,18 @@ class FavoritesVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         self.myTableView.delegate = self
         self.myTableView.dataSource = self
 
+
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.defaultView.frame = self.myTableView.frame
+
+        if self.doctorsSelected {
+            ShowDoctors(self.doctorsBt)
+        }else{
+            ShowClinics(self.clinicsBt)
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -85,6 +92,7 @@ class FavoritesVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         UIView.animate(withDuration: 0.3) {
             self.subView.frame.size.width = self.doctorsBt.frame.size.width
             self.subView.center.x = self.doctorsBt.center.x
+            self.subView.frame.origin.y = self.doctorsBt.frame.maxY - 2
         }
 
         updateDefaultView()
@@ -97,6 +105,7 @@ class FavoritesVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         UIView.animate(withDuration: 0.3) {
             self.subView.frame.size.width = self.clinicsBt.frame.size.width
             self.subView.center.x = self.clinicsBt.center.x
+            self.subView.frame.origin.y = self.clinicsBt.frame.maxY - 2
         }
 
         updateDefaultView()
