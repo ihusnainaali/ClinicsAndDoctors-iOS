@@ -525,7 +525,7 @@ extension HomeVC {
                 imageView.contentMode = .scaleAspectFill
                 imageView.clipsToBounds = true
                 imageView.backgroundColor = .white
-                imageView.yy_setImage(with: URL(string: clinic.profile_picture)!, placeholder: #imageLiteral(resourceName: "pinInfinix"), options: .setImageWithFadeAnimation, completion: { (image, _, _, _, error) in
+                imageView.yy_setImage(with: URL(string: clinic.profile_picture), placeholder: #imageLiteral(resourceName: "pinInfinix"), options: .setImageWithFadeAnimation, completion: { (image, _, _, _, error) in
                 })
 
                 pinClinic.iconView = imageView

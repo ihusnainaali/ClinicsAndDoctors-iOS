@@ -6,7 +6,7 @@
   Copyright © 2017 InfinixSoft. All rights reserved.
 */
 
-
+"The mobile number should be 10 digits starting by 05" = "The mobile number should be 10 digits starting by 05";
 "Wrong mobile or password" = "Wrong mobile or password";
 "Network error ocurred" = "Network error ocurred";
 "Register error. Please try again with another credentials" = "Register error. Please try again with another credentials";

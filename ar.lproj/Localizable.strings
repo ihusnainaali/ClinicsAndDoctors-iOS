@@ -6,7 +6,7 @@
   Copyright © 2017 InfinixSoft. All rights reserved.
 */
 
-
+"The mobile number should be 10 digits starting by 05" = "يجب أن يكون رقم الهاتف المحمول 10 أرقام بدءًا م 05";
 "Wrong mobile or password" = "كلمة مرور أو كلمة مرور خاطئة";
 "Network error ocurred" = "حدث خطأ في الشبكة";
 "Register error. Please try again with another credentials" = "الرجاء إعادة المحاولة باستخدام بيانات اعتماد أخرى";

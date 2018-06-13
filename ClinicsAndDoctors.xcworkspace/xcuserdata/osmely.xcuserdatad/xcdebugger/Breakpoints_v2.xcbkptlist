@@ -58,12 +58,12 @@
                   moduleName = "ClinicsAndDoctors"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///CONTENIDO/ProyectosActuales/Clinics/Git/infinixsoft_clinicsanddoctors/ClinicsAndDoctors/Models/ClinicModel.swift"
-                  timestampString = "550580173.762597"
+                  timestampString = "550602410.394238"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "125"
                   endingLineNumber = "125"
-                  offsetFromSymbolStart = "2958">
+                  offsetFromSymbolStart = "2280">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -73,12 +73,12 @@
                   moduleName = "ClinicsAndDoctors"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///CONTENIDO/ProyectosActuales/Clinics/Git/infinixsoft_clinicsanddoctors/ClinicsAndDoctors/Models/ClinicModel.swift"
-                  timestampString = "550580173.765414"
+                  timestampString = "550602410.396997"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "125"
                   endingLineNumber = "125"
-                  offsetFromSymbolStart = "25">
+                  offsetFromSymbolStart = "32">
                </Location>
             </Locations>
          </BreakpointContent>
