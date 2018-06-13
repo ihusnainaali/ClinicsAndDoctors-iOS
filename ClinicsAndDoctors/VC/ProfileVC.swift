@@ -136,7 +136,7 @@ class ProfileVC: UIViewController , UINavigationControllerDelegate, UIImagePicke
         }
         else if !isValidPhone(testStr: mobileTf.text!){
             self.mobileTf.textColor = .red
-            self.SwiftMessageAlert(layout: .cardView, theme: .error, title: "", body: "Wrong Mobile, it should only be between 6 and 14 numbers".localized)
+            self.SwiftMessageAlert(layout: .cardView, theme: .error, title: "", body: "The mobile number should be 10 digits starting by 05".localized)
         }
         else if nameTf.text == nil || nameTf.text!.isEmpty {
             self.nameTf.textColor = .red
@@ -181,8 +181,10 @@ class ProfileVC: UIViewController , UINavigationControllerDelegate, UIImagePicke
     }
 
     func isValidPhone(testStr:String) -> Bool {
-        //let phoneRegEx = "^((\\+)|(00))[0-9]{6,14}$"
-        let phoneRegEx = "^[0-9]{6,14}$"
+        if testStr.prefix(2) != "05" {
+            return false
+        }
+        let phoneRegEx = "^[0-9]{10}$"
         let phoneTest = NSPredicate(format:"SELF MATCHES %@", phoneRegEx)
         let result = phoneTest.evaluate(with: testStr)
         return result

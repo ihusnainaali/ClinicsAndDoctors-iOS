@@ -385,13 +385,13 @@
 		FBD7A2E61F9262620038DD30 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FBD7A2E71F9262800038DD30 /* ISClient.swift */,
 				FE230B841FB9D47900A1F19D /* Localizable.swift */,
 				FE0FAAA91FACBFA600C27C16 /* RoundedButton.swift */,
 				FE0FAAAA1FACBFA600C27C16 /* RoundedImageView.swift */,
 				FE0FAAA71FACBFA500C27C16 /* RoundedView.swift */,
 				FE0FAAAE1FACC26E00C27C16 /* UIColor+Extensions.swift */,
 				FE0FAAAF1FACC26E00C27C16 /* UIView+Extension.swift */,
-				FBD7A2E71F9262800038DD30 /* ISClient.swift */,
 				FE40EECE1FC34CA00045B201 /* UIButton+Extensions.swift */,
 				FEE29A2C1FC506C10012C676 /* Whatsapp.swift */,
 			);

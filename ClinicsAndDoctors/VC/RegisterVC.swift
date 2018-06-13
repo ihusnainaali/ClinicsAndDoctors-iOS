@@ -81,7 +81,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate, UIImagePickerController
         }
         else if !isValidPhone(testStr: phone_numberTf.text!){
             //self.phone_numberTf.textColor = .red
-            self.SwiftMessageAlert(layout: .cardView, theme: .error, title: "", body: "Wrong Mobile, it should only be between 6 and 14 numbers".localized)
+            self.SwiftMessageAlert(layout: .cardView, theme: .error, title: "", body: "The mobile number should be 10 digits starting by 05".localized)
         }
         else if passwordTf.text != passwordCheckTf.text{
             self.SwiftMessageAlert(layout: .cardView, theme: .error, title: "", body: "The password and Re-Type Password are not same, please check".localized)
@@ -183,8 +183,10 @@ class RegisterVC: UIViewController, UITextFieldDelegate, UIImagePickerController
     }
     
     func isValidPhone(testStr:String) -> Bool {
-        //let phoneRegEx = "^((\\+)|(00))[0-9]{6,14}$"
-        let phoneRegEx = "^[0-9]{6,14}$"
+        if testStr.prefix(2) != "05" {
+            return false
+        }
+        let phoneRegEx = "^[0-9]{10}$"
         let phoneTest = NSPredicate(format:"SELF MATCHES %@", phoneRegEx)
         let result = phoneTest.evaluate(with: testStr)
         return result

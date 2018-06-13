@@ -30,7 +30,7 @@ class ForgotPasswordVC: UIViewController {
         }
         else if !isValidPhone(testStr: phoneTf.text!){
             self.phoneTf.textColor = .red
-            self.SwiftMessageAlert(layout: .cardView, theme: .error, title: "", body: "Incorrect Phone Number, please check".localized)
+            self.SwiftMessageAlert(layout: .cardView, theme: .error, title: "", body: "The mobile number should be 10 digits starting by 05".localized)
 
             
         }
@@ -55,10 +55,10 @@ class ForgotPasswordVC: UIViewController {
     }
     
     func isValidPhone(testStr:String) -> Bool {
-
-        return !testStr.isEmpty
-        
-        let phoneRegEx = "^((\\+)|(00))[0-9]{6,14}$"
+        if testStr.prefix(2) != "05" {
+            return false
+        }
+        let phoneRegEx = "^[0-9]{10}$"
         let phoneTest = NSPredicate(format:"SELF MATCHES %@", phoneRegEx)
         let result = phoneTest.evaluate(with: testStr)
         return result

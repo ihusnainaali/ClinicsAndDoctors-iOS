@@ -38,7 +38,7 @@ class LoginWithEmailVC: UIViewController, UITextFieldDelegate {
         }
         else if !isValidPhone(testStr: phoneTf.text!){
             self.phoneTf.textColor = .red
-            self.SwiftMessageAlert(layout: .cardView, theme: .error, title: "", body: "Wrong Mobile, it should only be between 6 and 14 numbers".localized)
+            self.SwiftMessageAlert(layout: .cardView, theme: .error, title: "", body: "The mobile number should be 10 digits starting by 05".localized)
         }
         else{
 
@@ -127,10 +127,10 @@ class LoginWithEmailVC: UIViewController, UITextFieldDelegate {
     }
     
     func isValidPhone(testStr:String) -> Bool {
-        //return !testStr.isEmpty
-        print("validating phone: \(testStr)")
-        //let phoneRegEx = "^((\\+)|(00))[0-9]{6,14}$"
-        let phoneRegEx = "^[0-9]{6,14}$"
+        if testStr.prefix(2) != "05" {
+            return false
+        }
+        let phoneRegEx = "^[0-9]{10}$"
         let phoneTest = NSPredicate(format:"SELF MATCHES %@", phoneRegEx)
         let result = phoneTest.evaluate(with: testStr)
         return result
