@@ -64,7 +64,7 @@ class ClinincDetailVC: UIViewController, UICollectionViewDataSource, UICollectio
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
     
-    self.defaultView.frame = self.myTableView.frame
+    //self.defaultView.frame = self.myTableView.frame
   }
   
   override func viewWillAppear(_ animated: Bool) {
