@@ -1,0 +1,8 @@
+app_identifier("com.clinicsanddoctors") # The bundle identifier of your app
+apple_id("sarokaivan@yahoo.com.ar") # Your Apple email address
+
+itc_team_id("118909201") # iTunes Connect Team ID
+team_id("EUARY92ECY") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
